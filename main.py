@@ -16,6 +16,15 @@ import sys
 import itertools
 import threading
 
+# NOTE
+# for when you have to setup
+# import tkinter
+# package = tkinter
+# try:
+#   return __import__(package)
+# except importerror:
+#   return none
+
 from maybespyware.mbspy.mddr.vv import *
 from maybespyware.mbspy.mddr.pocketlad import *
 from maybespyware.mbspy.sys.sysinfo import *
@@ -27,6 +36,8 @@ def clear():
         clr = system('cls')
     else:
         clr = system('clear')
+
+
 
 if os.geteuid() != 0:
     done = True
@@ -62,7 +73,6 @@ else:
     OS = 'Windows'
 
 #loading
-time.sleep(0.5)
 clear()
 done = True
 sleep(0.5)
@@ -73,7 +83,7 @@ clear()
 def optmenu():
     print('Choose one option by typing the number corresponding to it.')
     print('Quotes // (1)')
-    print('"Special" Surprise ;) // (2)')
+    print('"Special" Surprise // NOT FUNCTIONAL // (2)')
     print('Please select a number')
     optans = input('')
     if optans == '1':

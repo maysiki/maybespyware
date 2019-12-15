@@ -22,25 +22,48 @@ def clear():
     else:
         clr = system('clear')
 
+def quotegen():
+    clear()
+    quote = random.randint(3, 32)
+    print(lines[quote])
+    repeatans = input('More quotes? (y/n)')
+    if repeatans == 'y':
+        quotegen()
+    elif repeatans == 'Y':
+        quotegen()
+    else:
+        clear()
+        print('Do you want to quit? (y/n)')
+        ans = input('')
+        if ans == 'y':
+            page.close()
+            exit()
+        elif ans == 'Y':
+            page.close()
+            exit()
+        else:
+            print(pktlad())
+        
+
+
+
 def pktlad():
     clear()
-    print('Currently, there are only', lines[0], 'quotes from', lines[1],' authors.')
-    print('Would you like to receive one? (y/n)')
+    print('These quotes are home-grown and grassfed. Please enjoy.')
+    print("")
+    print('Would you like to receive one? (y/n)     ')
     ans = input('')
 
     if ans == 'y':
-        quote = random.randint(0, 33)
-        print(quote)
-        page.close
+        quotegen()
 
     elif ans == 'Y':
-        quote = random.randint(0, 33)
-        print(quote)
+        quotegen()
         page.close
 
     else:
         clear()
-        print('Would you like to exit? (y/n)')
+        print('Would you like to exit? (y/n)     ')
         ans = input('')
         if ans == 'y':
             print('Exiting...')

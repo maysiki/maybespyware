@@ -9,7 +9,7 @@ import random
 
 def injector():
     
-    print('test success')
+    print('THIS MODULE DOES NOT WORK')
     print('Exiting now...')
     time.sleep(2)
     exit()
