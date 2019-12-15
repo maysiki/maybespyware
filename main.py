@@ -15,40 +15,40 @@ import maybespyware.mbspy.sys.sysinfo
 import sys
 import itertools
 import threading
+import platform
 
 # NOTE
 # for when you have to setup
-# import tkinter
-# package = tkinter
-# try:
-#   return __import__(package)
-# except importerror:
-#   return none
+import tkinter
 
 from maybespyware.mbspy.mddr.vv import *
 from maybespyware.mbspy.mddr.pocketlad import *
 from maybespyware.mbspy.sys.sysinfo import *
 from time import sleep
-from os import system, name
+from os import name
+from platform import system
 
 def clear():
     if name == ('nt'):
-        clr = system('cls')
+        clr = os.system('cls')
     else:
-        clr = system('clear')
+        clr = os.system('clear')
 
+iios = system()
 
-
-if os.geteuid() != 0:
-    done = True
-    clear()
-    sleep(0.1)
-    clear()
-    sleep(0.1)
-    clear()
-    print('Please run this script as root. Use the sudo command to do so. Thanks.')
-    sleep(2)
-    exit()
+if name == ('nt'):
+    pass
+else:
+    if os.geteuid() != 0:
+        done = True
+        clear()
+        sleep(0.1)
+        clear()
+        sleep(0.1)
+        clear()
+        print('Please run this script as root. Use the sudo command to do so. Thanks.')
+        sleep(2)
+        exit()
 
 
 done = False
@@ -83,13 +83,16 @@ clear()
 def optmenu():
     print('Choose one option by typing the number corresponding to it.')
     print('Quotes // (1)')
-    print('"Special" Surprise // NOT FUNCTIONAL // (2)')
+    # print('"Special" Surprise // NOT FUNCTIONAL // (2)')
     print('Please select a number')
     optans = input('')
     if optans == '1':
         maybespyware.mbspy.mddr.pocketlad.pktlad()
-    elif optans == '2':
-        maybespyware.mbspy.mddr.vv.injector()
+
+    # NOTE ADD THIS IN 0.2
+    # elif optans == '2':
+        # maybespyware.mbspy.mddr.vv.injector()
+
     else:
         clear()
         print('I said select a number. Lets retry that.')
@@ -106,11 +109,24 @@ def welscr():
     print("Hello, and welcome to my script, which might just be spyware. It probably isn't though. This is a beta version, so it might not even work lol")
     print('I recommend you check for updates at my GitHub repository: https://github.com/maesyki/maybespyware')
     print('')
-    input('Please press enter to continue ')
+    print('Please enter "u" to run the updater.')
+    print('')
+    ans = input('Please press enter to continue to script. ')
+    if ans == 'u':
+        if iios == 'Darwin':
+            os.system('git clone https://github.com/maesyki/maybespyware.git')
+            
+        elif iios == 'Linux':
+            os.system('git clone https://github.com/maesyki/maybespyware.git')
 
-    clear()
+        elif iios == 'Windows':
+            print('Sorry, the updater is not supported by windows. Please update manually through https://github.com/maesyki/maybespyware/releases')
+            time.sleep(5)
+            print(welscr())
+    else:
+        clear()
 
-    optmenu()
+        optmenu()
 
 welscr()
 

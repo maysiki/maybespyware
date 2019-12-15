@@ -7,6 +7,9 @@ import sys
 import itertools
 import threading
 import random
+import tkinter
+
+
 
 page = open("syquot.txt", 'r')
 
@@ -15,6 +18,15 @@ lines = page.readlines()
 
 from time import sleep
 from os import system, name
+
+height = 300
+width = 400
+
+"""def qguib():
+    root = tkinter.Tk()
+    canvas = tkinter.Canvas(root, height = height, width = width)
+    tkinter.Label.config(font = ("Arial", 44))"""
+    
 
 def clear():
     if name == ('nt'):
