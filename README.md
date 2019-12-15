@@ -1,12 +1,12 @@
 # maybespyware
+A small meme project gone wrong.
 
-a shitty meme project
+STILL IN BETA, PROBABLY DOESN'T WORK.
 
-# How to Use
+GUI version coming soon...
 
-run "cd /filedirectory/maybespyware/ && sudo python3 main.py"
+# How to use
+you dont.
 
-should work.
-
-# Disclaimer
-still in beta, probably sucks.
+but if you really, really want to, then run this in a terminal window with admin privileges.
+use smth like: sudo python3 main.py

@@ -6,10 +6,12 @@ import sys
 import itertools
 import threading
 import random
+import platform
+
+from os import *
 
 def injector():
-    
-    print('THIS MODULE DOES NOT WORK')
-    print('Exiting now...')
+    print('THIS DOESNT WORK')
     time.sleep(2)
     exit()
+
