@@ -1,4 +1,4 @@
-# maybespyware beta
+# maybespyware
 
 Disclaimer: 
 Most features may not work.
