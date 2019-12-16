@@ -7,33 +7,52 @@
 # You're not supposed to read this, right?
 
 # Imports
+print('Importing time...')
 import time
+print('Done')
+print('Importing OS module...')
 import os
+print('Done')
+print('Acquiring local functions...')
 import maybespyware.mbspy.mddr.pocketlad
 import maybespyware.mbspy.mddr.vv
 import maybespyware.mbspy.sys.sysinfo
+print('Done')
+print('Importing system module...')
 import sys
+print('Done')
+print('Importing other modules...')
 import itertools
 import threading
+print('Done')
+print('Importing OS information...')
 import platform
+print('Done')
 
 # NOTE
 # for when you have to setup
+print('Importing UI module...')
 import tkinter
+print('Done')
 
+print('Processing triggers for imports...')
 from maybespyware.mbspy.mddr.vv import *
 from maybespyware.mbspy.mddr.pocketlad import *
 from maybespyware.mbspy.sys.sysinfo import *
 from time import sleep
 from os import name
 from platform import system
+print('Done')
 
+print('Setting clear function...')
 def clear():
     if name == ('nt'):
         clr = os.system('cls')
     else:
         clr = os.system('clear')
+print('Done')
 
+print('Acquiring system information...')
 iios = system()
 
 if name == ('nt'):
@@ -49,8 +68,9 @@ else:
         print('Please run this script as root. Use the sudo command to do so. Thanks.')
         sleep(2)
         exit()
+print('Done')
 
-
+print('Creating animation function...')
 done = False
 #here is the animation
 def animate():
@@ -64,13 +84,7 @@ def animate():
 
 t = threading.Thread(target=animate)
 t.start()
-
-
-# System Info
-if name == 'posix':
-    OS = 'macOS'
-else:
-    OS = 'Windows'
+print('Done')
 
 #loading
 clear()

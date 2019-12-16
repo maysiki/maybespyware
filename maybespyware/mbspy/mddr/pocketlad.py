@@ -9,24 +9,12 @@ import threading
 import random
 import tkinter
 
-
+from time import sleep
+from os import system, name
 
 page = open("syquot.txt", 'r')
 
 lines = page.readlines()
-
-
-from time import sleep
-from os import system, name
-
-height = 300
-width = 400
-
-"""def qguib():
-    root = tkinter.Tk()
-    canvas = tkinter.Canvas(root, height = height, width = width)
-    tkinter.Label.config(font = ("Arial", 44))"""
-    
 
 def clear():
     if name == ('nt'):
@@ -38,7 +26,9 @@ def quotegen():
     clear()
     quote = random.randint(3, 32)
     print(lines[quote])
-    repeatans = input('More quotes? (y/n)')
+    print('')
+    print('More quotes? (y/n)')
+    repeatans = input('')
     if repeatans == 'y':
         quotegen()
     elif repeatans == 'Y':
@@ -79,11 +69,10 @@ def pktlad():
         ans = input('')
         if ans == 'y':
             print('Exiting...')
-            time.sleep(1)
             exit()
+
         elif ans == 'Y':
             print('Exiting...')
-            time.sleep(1)
             exit()
         else:
             print(pktlad())
