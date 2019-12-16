@@ -23,7 +23,6 @@ def clear():
 def pktlad():
 
     pktladroot = Tk()
-    pktladroot.resizable(0, 0)
     pktladroot.geometry('650x75')
     pktladroot.title('maybespyware '+ version)
     pktladroot.configure(background = 'gray15')
