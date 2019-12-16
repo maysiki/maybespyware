@@ -3,9 +3,9 @@ from tkinter import *
 import time
 import os
 import sys
-import func.pktlad
-from func.pktlad import *
-from func.sysinfo import version
+import lib.pktlad
+from lib.pktlad import *
+from lib.sysinfo import version
 
 def clear():
     if os.name == ('nt'):
@@ -17,7 +17,7 @@ def clear():
 def title():
     root = Tk()
     root.resizable(0, 0)
-    root.geometry('500x300')
+    root.geometry('450x225')
     root.title('maybespyware '+ version)
     root.configure(background = 'gray15')
    

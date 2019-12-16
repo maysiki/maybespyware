@@ -4,7 +4,7 @@ import time
 import os
 import sys
 import random
-from func.sysinfo import version
+from lib.sysinfo import version
 
 from time import sleep
 from os import system, name
@@ -24,7 +24,7 @@ def pktlad():
 
     pktladroot = Tk()
     pktladroot.resizable(0, 0)
-    pktladroot.geometry('700x100')
+    pktladroot.geometry('650x75')
     pktladroot.title('maybespyware '+ version)
     pktladroot.configure(background = 'gray15')
 
