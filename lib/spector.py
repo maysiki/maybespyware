@@ -1,4 +1,4 @@
-injector_version = 'v0.0.1'
+injector_version = 'North Korea'
 
 import tkinter
 from tkinter import *
@@ -8,9 +8,35 @@ import sys
 import random
 from lib.sysinfo import version
 
-def spector():
-    
-    inRoot = Tk()
-    inRoot.title('maybespyware ' + version)
-    inRoot.configure(bg = 'gray15')
+wcount = 50
 
+def spector():
+
+    def windowloop():
+        for i in range(wcount):
+            inRoot = Tk()
+            inRoot.title('most likely spyware time')
+            inRoot.configure(bg = 'gray10')
+
+            title = Label(inRoot, text = 'spyware time!', bg = 'gray15', fg = 'white', font = "Arial 32 bold")
+            title.grid(row = 0, column = 1, sticky = NW)
+        
+    windowloop()
+
+    def titlescreen():
+        tiscreen = Tk()
+        tiscreen.title('computer hacked noot noot >:D')
+        tiscreen.overrideredirect(True)
+        title = Label(tiscreen, text = 'n00t n00t good luck trying to close this lmao', bg = 'gray15', fg = 'white', font = "Arial 32 bold")
+        title.grid(row = 0, column = 1, sticky = NW)
+
+    def password():
+        root = Tk()
+        root.overrideredirect(True)
+        title = Label(root, text = 'whats the password?', bg = 'gray15', fg = 'white', font = "Arial 32 bold")
+        title.grid(row = 0, column = 1, sticky = NW)
+
+        
+
+    
+    titlescreen()

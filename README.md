@@ -3,9 +3,6 @@ A small meme project gone wrong.
 
 https://maesyki.github.io/maybespyware/
 
-PROBABLY DOESN'T WORK.
-This script does not properly work on windows either.
-
 # download
 Download latest at:
 https://github.com/maesyki/maybespyware/releases

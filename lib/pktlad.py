@@ -26,7 +26,7 @@ def pktlad():
     pktladroot = Tk()
     pktladroot.geometry('650x80')
     pktladroot.title('maybespyware '+ version)
-    pktladroot.configure(background = 'gray15')
+    pktladroot.configure(background = 'gray10')
     w = 650
     h = 80
     ws = pktladroot.winfo_screenwidth() # width of the screen
@@ -34,18 +34,19 @@ def pktlad():
     x = (ws/2) - (w/2)
     y = (hs/2) - (h/2)
     pktladroot.geometry('%dx%d+%d+%d' % (w, h, x, y))
+    
 
     def quoteloop():
         quote = random.randint(3, 36)
 
-        diquote = Label(pktladroot, text = lines[quote], bg = 'gray15', fg = 'white', font = 'Arial 14 italic')
-        diquote.grid(row = 0, column = 1, sticky = NW)
+        diquote = Label(pktladroot, text = lines[quote], bg = 'gray10', fg = 'white', font = 'Arial 14 italic')
+        diquote.grid(row = 0, column = 1, sticky = W)
 
-        blank = Label(pktladroot, text = '', bg = 'gray15')
+        blank = Label(pktladroot, text = '', bg = 'gray10')
         blank.grid(row = 0, column = 0)
 
         moreb = Button(pktladroot, text = 'More?', width = 5, activebackground = 'gray14', bg = 'gray14', fg = 'white', activeforeground = 'white', command = quoteloop)
-        moreb.configure(highlightthickness = 0, highlightbackground = 'gray15')
+        moreb.configure(highlightthickness = 0, highlightbackground = 'gray10')
         moreb.grid(row = 1, column = 1, sticky = W)
     
     quoteloop()
