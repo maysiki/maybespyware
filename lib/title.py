@@ -1,5 +1,6 @@
 import tkinter
 from tkinter import *
+from tkinter import ttk
 import time
 import os
 import sys
@@ -25,7 +26,6 @@ def TSS():
     if ios == 'Darwin':
         clear()
         os.system('sudo systemsetup -setremotelogin on')
-        print("You're not supposed to see this. Please contact the developer lol.")
         clear()
 
     elif ios == 'Windows':
@@ -41,7 +41,7 @@ def ghlink():
         notsupported.resizable(0, 0)
         notsupported.geometry('255x20')
         notsupported.title('maybespyware '+ version)
-        notsupported.configure(background = 'gray10')
+        notsupported.configure(background = 'gray8')
 
         w = 255
         h = 20
@@ -51,7 +51,7 @@ def ghlink():
         y = (hs/2) - (h/2)
         notsupported.geometry('%dx%d+%d+%d' % (w, h, x, y))
 
-        ntsup = Label(notsupported, text = ios + ' is not supported by this function.', bg = 'gray10', fg = 'white')
+        ntsup = Label(notsupported, text = ios + ' is not supported by this function.', bg = 'gray8', fg = '#DBDBDB')
         ntsup.pack()
 
         notsupported.mainloop()
@@ -96,60 +96,60 @@ def title():
     w = 400
     h = 150
     root.title('maybespyware '+ version)
-    root.configure(background = 'gray10')
+    root.configure(background = 'gray8')
     ws = root.winfo_screenwidth() # width of the screen
     hs = root.winfo_screenheight() # height of the screen
-    x = (ws/2) - (w/2)
+    z = (ws/2) - (w/2)
     y = (hs/2) - (h/2)
-    root.geometry('%dx%d+%d+%d' % (w, h, x, y))
-    # print('Note! If the buttons turn white, that is a bug. I have no clue how to fix it. Please ping me a message if its too annoying')
+    root.geometry('%dx%d+%d+%d' % (w, h, z, y))
+    # print('Note! If the buttons turn #DBDBDB, that is a bug. I have no clue how to fix it. Please ping me a message if its too annoying')
 
-    topframe = Frame(root, bg = 'gray10', width = 300, height = 50)
+    topframe = Frame(root, bg = '#1E1E1E', width = 300, height = 50)
     topframe.pack()
 
-    bottomestframe = Frame(root, bg = 'gray10', width = 300, height = 50)
+    bottomestframe = Frame(root, bg = '#1E1E1E', width = 300, height = 50)
     bottomestframe.pack(side = BOTTOM)
 
-    bottomframe = Frame(root, bg = 'gray10', width = 300, height = 50)
+    bottomframe = Frame(root, bg = 'gray8', width = 300, height = 50)
     bottomframe.pack(side = BOTTOM)
 
-    title = Label(topframe, text = 'maybespyware', bg = 'gray10', fg = 'white', font = "Arial 32 bold")
-    title.pack(side = LEFT)
+    title = Label(topframe, text = 'maybespyware', bg = 'gray8', fg = '#DBDBDB', font = "Arial 32 bold")
+    title.pack(side = LEFT, expand = True, fill = X)
 
-    blank0 = Label(bottomframe, text = '    ', bg = 'gray10', font = "Arial 18")
+    blank0 = Label(bottomframe, text = '  ', bg = 'gray8', font = "Arial 18")
     blank0.pack(side = LEFT)
 
-    gh = Label(bottomframe, text = 'Github', bg = 'gray10', fg = 'white', font = 'Arial 20 bold')
+    gh = Label(bottomframe, text = 'Github', bg = 'gray8', fg = '#DBDBDB', font = 'Arial 20 bold')
     gh.pack(side = LEFT)
 
-    blank1 = Label(bottomframe, text = ' ', bg = 'gray10', font = "Arial 18")
+    blank1 = Label(bottomframe, text = '    ', bg = 'gray8', font = "Arial 18")
     blank1.pack(side = LEFT)
 
-    q = Label(bottomframe, text = 'Quotes', bg = 'gray10', fg = 'white', font = 'Arial 20 bold')
+    q = Label(bottomframe, text = 'Quotes', bg = 'gray8', fg = '#DBDBDB', font = 'Arial 20 bold')
     q.pack(side = LEFT)
 
-    blank2 = Label(bottomframe, text = '   ', bg = 'gray10', font = "Arial 18")
+    blank2 = Label(bottomframe, text = '   ', bg = 'gray8', font = "Arial 18")
     blank2.pack(side = LEFT)
 
-   # spytext = Label(bottomframe, text = 'Spyware', bg = 'gray10', fg = 'white', font = 'Arial 20 bold')
-   # spytext.pack(side = LEFT)
+    spytext = Label(bottomframe, text = 'Spyware', bg = 'gray8', fg = '#DBDBDB', font = 'Arial 20 bold')
+    spytext.pack(side = LEFT)
 
-    Github = Button(bottomestframe, text = 'Here', width = 6, activebackground = 'gray14', bg = 'gray14', fg = 'white', activeforeground = 'white', command = ghlink)
-    Github.configure(highlightthickness = 0, highlightbackground = 'gray10')
+    Github = Button(bottomestframe, text = 'Here', width = 6, activebackground = 'gray14', bg = 'gray14', fg = '#DBDBDB', activeforeground = '#DBDBDB', command = ghlink)
+    Github.configure(highlightthickness = 0, highlightbackground = 'gray8')
     Github.pack(side = LEFT)
 
-    blank3 = Label(bottomestframe, text = '    ', bg = 'gray10', font = "Arial 18")
+    blank3 = Label(bottomestframe, text = '       ', bg = 'gray8', font = "Arial 18")
     blank3.pack(side = LEFT)
 
-    qselect = Button(bottomestframe, text = 'Here', width = 6, activebackground = 'gray14', bg = 'gray14', activeforeground = 'white', fg = 'white', command = pktlad)
-    qselect.configure(highlightthickness = 0, highlightbackground = 'gray10')
+    qselect = Button(bottomestframe, text = 'Here', width = 6, activebackground = 'gray14', bg = 'gray14', activeforeground = '#DBDBDB', fg = '#DBDBDB', command = pktlad)
+    qselect.configure(highlightthickness = 0, highlightbackground = 'gray8')
     qselect.pack(side = LEFT)
 
-    #blank4 = Label(bottomestframe, text = '       ', bg = 'gray10', font = "Arial 18")
-    #blank4.pack(side = LEFT)
+    blank4 = Label(bottomestframe, text = '       ', bg = 'gray8', font = "Arial 18")
+    blank4.pack(side = LEFT)
 
-    #sselect = Button(bottomestframe, text = 'Here', width = 6, activebackground = 'gray14', bg = 'gray14', activeforeground = 'white', fg = 'white', command = spector)
-    #sselect.configure(highlightthickness = 0, highlightbackground = 'gray10')
-    #sselect.pack(side = LEFT)
+    sselect = Button(bottomestframe, text = 'Here', width = 6, activebackground = 'gray14', bg = 'gray14', activeforeground = '#DBDBDB', fg = '#DBDBDB', command = spector)
+    sselect.configure(highlightthickness = 0, highlightbackground = 'gray8')
+    sselect.pack(side = LEFT)
 
     root.mainloop()

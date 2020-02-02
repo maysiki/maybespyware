@@ -27,13 +27,13 @@ def spector():
         tiscreen = Tk()
         tiscreen.title('computer hacked noot noot >:D')
         tiscreen.overrideredirect(True)
-        title = Label(tiscreen, text = 'n00t n00t good luck trying to close this lmao', bg = 'gray15', fg = 'white', font = "Arial 32 bold")
+        title = Label(tiscreen, text = 'computer hacked n00t n00t >:D', bg = 'gray15', fg = 'white', font = "Arial 32 bold")
         title.grid(row = 0, column = 1, sticky = NW)
 
     def password():
         root = Tk()
         root.overrideredirect(True)
-        title = Label(root, text = 'whats the password?', bg = 'gray15', fg = 'white', font = "Arial 32 bold")
+        title = Label(root, text = 'guess the password lol', bg = 'gray15', fg = 'white', font = "Arial 32 bold")
         title.grid(row = 0, column = 1, sticky = NW)
 
         
