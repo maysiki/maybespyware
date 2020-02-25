@@ -37,10 +37,12 @@ def pktlad():
     
 
     def quoteloop():
-        quote = random.randint(3, 36)
+        quote = random.randint(3, 39)
 
         diquote = Label(pktladroot, text = lines[quote], bg = 'gray10', fg = 'white', font = 'Arial 14 italic')
         diquote.grid(row = 0, column = 1, sticky = W)
+
+        page.close()
 
         blank = Label(pktladroot, text = '', bg = 'gray10')
         blank.grid(row = 0, column = 0)
