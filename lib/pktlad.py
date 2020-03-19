@@ -9,7 +9,7 @@ from lib.sysinfo import version
 from time import sleep
 from os import system, name
 
-pk_version = 'v1.1.1'
+pk_version = 'v1.3'
 
 page = open("syquot.txt", 'r')
 
@@ -37,7 +37,7 @@ def pktlad():
     
 
     def quoteloop():
-        quote = random.randint(3, 39)
+        quote = random.randint(3, 40)
 
         diquote = Label(pktladroot, text = lines[quote], bg = 'gray10', fg = 'white', font = 'Arial 14 italic')
         diquote.grid(row = 0, column = 1, sticky = W)

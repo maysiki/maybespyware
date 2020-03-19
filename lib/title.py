@@ -72,14 +72,7 @@ def ghlink():
         pass
        
 def title():
-
-    # NOTE 
-    # comment out for public release
-    # print('running pk '+ pk_version)
-    # print('running injector ' + injector_version)
-
-
-
+    
 
 
     ########################################### NOTE ####################################################
